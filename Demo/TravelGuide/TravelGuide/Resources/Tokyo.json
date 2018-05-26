@@ -1,0 +1,41 @@
+{
+    "title" : "Tokyo",
+    "subtitle" : "from neon-lit skyscrapers to historic temples",
+    "imageName" : "Tokyo-Header.jpg",
+    "detail" : {
+        "title" : "Welcome to Tokyo",
+        "shortText" : "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples",
+        "fullText" : "Tokyo's neon-lit streetscapes still look like a sci-fi film set – and that's a vision of the city from the 1980s. Tokyo has been building ever since, pushing the boundaries of what's possible on densely populated, earthquake-prone land, adding ever taller, sleeker structures.\n\nTokyo may be forever reaching into the future but you can still see traces of the shogun's capital on the kabuki stage, at a sumo tournament or under the cherry blossoms. It's a modern city built on old patterns, and in the shadows of skyscrapers you can find anachronistic wooden shanty bars and quiet alleys, raucous traditional festivals and lantern-lit yakitori (grilled chicken) stands."
+    },
+    "groups" : [{
+        "name" : "Neighborhoods",
+        "places" : [{
+            "name" : "Shibuya",
+            "text" : "Shibuya is the heart of Tokyo's youth culture and hits you over the head with its sheer presence: the continuous flow of people, the glowing video screens and the tangible buzz.",
+            "imageName" : "Shibuya Crossing.jpg"
+        }, {
+            "name" : "Ginza",
+            "text" : "Ginza is Tokyo's most polished neighbourhood, a luxury fashion centre resplendent with department stores, art galleries and exclusive restaurants.",
+            "imageName" : "Ginza.jpg"
+        }, {
+            "name" : "Akihabara",
+            "text" : "Browse the electronic, pop-culture and contemporary-craft emporiums of Akihabara.",
+            "imageName" : "Akihabara.jpg"
+        }]
+    }, {
+        "name" : "Sightseeing",
+        "places" : [{
+            "name" : "Imperial Palace",
+            "text" : "In its heyday this was the largest fortress in the world, though little remains of it today apart from the moat and stone walls.",
+            "imageName" : "Imperial Palace.jpg"
+        }, {
+            "name" : "Sky Tree",
+            "text" : "Tokyo Sky Tree opened in May 2012 as the world’s tallest ‘free-standing tower’ at 634m.",
+            "imageName" : "Sky Tree.jpg"
+        }, {
+            "name" : "Sensō-ji Temple",
+            "text" : "Tokyo’s most visited temple enshrines a golden image of Kannon (the Buddhist goddess of mercy), which, according to legend, was miraculously pulled out of the nearby Sumida-gawa by two fishermen in AD 628.",
+            "imageName" : "Senso-ji Temple.jpg"
+        }]
+    }]
+}

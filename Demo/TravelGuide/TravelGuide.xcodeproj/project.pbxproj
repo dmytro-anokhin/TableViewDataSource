@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F47B5D3620B8B4FC00BC1452 /* Sky Tree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D2E20B8B4FC00BC1452 /* Sky Tree.jpg */; };
+		F47B5D3720B8B4FC00BC1452 /* Ginza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D2F20B8B4FC00BC1452 /* Ginza.jpg */; };
+		F47B5D3820B8B4FC00BC1452 /* Akihabara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D3020B8B4FC00BC1452 /* Akihabara.jpg */; };
+		F47B5D3920B8B4FC00BC1452 /* Tokyo.json in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D3120B8B4FC00BC1452 /* Tokyo.json */; };
+		F47B5D3A20B8B4FC00BC1452 /* Shibuya Crossing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D3220B8B4FC00BC1452 /* Shibuya Crossing.jpg */; };
+		F47B5D3B20B8B4FC00BC1452 /* Tokyo-Header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D3320B8B4FC00BC1452 /* Tokyo-Header.jpg */; };
+		F47B5D3C20B8B4FC00BC1452 /* Imperial Palace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D3420B8B4FC00BC1452 /* Imperial Palace.jpg */; };
+		F47B5D3D20B8B4FC00BC1452 /* Senso-ji Temple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F47B5D3520B8B4FC00BC1452 /* Senso-ji Temple.jpg */; };
+		F4EA2F0820B8B5B700FDCB1C /* HeaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D2020B8B33900BC1452 /* HeaderDataSource.swift */; };
+		F4EA2F0920B8B5BA00FDCB1C /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D1F20B8B33900BC1452 /* HeaderCell.swift */; };
+		F4EA2F0A20B8B5C200FDCB1C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D2220B8B33900BC1452 /* Model.swift */; };
+		F4EA2F0C20B8B5CA00FDCB1C /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D1E20B8B33900BC1452 /* PlaceCell.swift */; };
+		F4EA2F0D20B8B5CA00FDCB1C /* PlacesGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D1D20B8B33900BC1452 /* PlacesGroupHeaderView.swift */; };
+		F4EA2F0E20B8B5CA00FDCB1C /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D2120B8B33900BC1452 /* LabelCell.swift */; };
+		F4EA2F1020B8B7E500FDCB1C /* PlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D2320B8B33900BC1452 /* PlacesDataSource.swift */; };
+		F4EA2F1120B8B7E800FDCB1C /* DetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D1C20B8B33900BC1452 /* DetailDataSource.swift */; };
+		F4EA2F1620B8CC7000FDCB1C /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4EA2F1520B8CC7000FDCB1C /* PlaceCell.xib */; };
+		F4EA2F1A20B8DDE300FDCB1C /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EA2F1920B8DDE300FDCB1C /* ButtonCell.swift */; };
+		F4F9395820B61AC000AE67E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9395720B61AC000AE67E4 /* AppDelegate.swift */; };
+		F4F9395A20B61AC000AE67E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9395920B61AC000AE67E4 /* ViewController.swift */; };
+		F4F9395D20B61AC000AE67E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F9395B20B61AC000AE67E4 /* Main.storyboard */; };
+		F4F9395F20B61AC100AE67E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F9395E20B61AC100AE67E4 /* Assets.xcassets */; };
+		F4F9396220B61AC100AE67E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F9396020B61AC100AE67E4 /* LaunchScreen.storyboard */; };
+		F4F9397C20B61AFD00AE67E4 /* TableViewDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F9397B20B61AFD00AE67E4 /* TableViewDataSource.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F47B5D1C20B8B33900BC1452 /* DetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDataSource.swift; sourceTree = "<group>"; };
+		F47B5D1D20B8B33900BC1452 /* PlacesGroupHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesGroupHeaderView.swift; sourceTree = "<group>"; };
+		F47B5D1E20B8B33900BC1452 /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		F47B5D1F20B8B33900BC1452 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		F47B5D2020B8B33900BC1452 /* HeaderDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDataSource.swift; sourceTree = "<group>"; };
+		F47B5D2120B8B33900BC1452 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		F47B5D2220B8B33900BC1452 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F47B5D2320B8B33900BC1452 /* PlacesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesDataSource.swift; sourceTree = "<group>"; };
+		F47B5D2E20B8B4FC00BC1452 /* Sky Tree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sky Tree.jpg"; sourceTree = "<group>"; };
+		F47B5D2F20B8B4FC00BC1452 /* Ginza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ginza.jpg; sourceTree = "<group>"; };
+		F47B5D3020B8B4FC00BC1452 /* Akihabara.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Akihabara.jpg; sourceTree = "<group>"; };
+		F47B5D3120B8B4FC00BC1452 /* Tokyo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tokyo.json; sourceTree = "<group>"; };
+		F47B5D3220B8B4FC00BC1452 /* Shibuya Crossing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Shibuya Crossing.jpg"; sourceTree = "<group>"; };
+		F47B5D3320B8B4FC00BC1452 /* Tokyo-Header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tokyo-Header.jpg"; sourceTree = "<group>"; };
+		F47B5D3420B8B4FC00BC1452 /* Imperial Palace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Imperial Palace.jpg"; sourceTree = "<group>"; };
+		F47B5D3520B8B4FC00BC1452 /* Senso-ji Temple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Senso-ji Temple.jpg"; sourceTree = "<group>"; };
+		F4EA2F1520B8CC7000FDCB1C /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		F4EA2F1920B8DDE300FDCB1C /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		F4F9395420B61AC000AE67E4 /* TravelGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F9395720B61AC000AE67E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4F9395920B61AC000AE67E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4F9395C20B61AC000AE67E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4F9395E20B61AC100AE67E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4F9396120B61AC100AE67E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4F9396320B61AC100AE67E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F9397B20B61AFD00AE67E4 /* TableViewDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TableViewDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4F9395120B61AC000AE67E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F9397C20B61AFD00AE67E4 /* TableViewDataSource.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F47B5D2D20B8B4FC00BC1452 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F47B5D2E20B8B4FC00BC1452 /* Sky Tree.jpg */,
+				F47B5D2F20B8B4FC00BC1452 /* Ginza.jpg */,
+				F47B5D3020B8B4FC00BC1452 /* Akihabara.jpg */,
+				F47B5D3120B8B4FC00BC1452 /* Tokyo.json */,
+				F47B5D3220B8B4FC00BC1452 /* Shibuya Crossing.jpg */,
+				F47B5D3320B8B4FC00BC1452 /* Tokyo-Header.jpg */,
+				F47B5D3420B8B4FC00BC1452 /* Imperial Palace.jpg */,
+				F47B5D3520B8B4FC00BC1452 /* Senso-ji Temple.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F4EA2F1220B8C7F300FDCB1C /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				F47B5D1F20B8B33900BC1452 /* HeaderCell.swift */,
+				F47B5D2020B8B33900BC1452 /* HeaderDataSource.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		F4EA2F1320B8C83700FDCB1C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F47B5D2120B8B33900BC1452 /* LabelCell.swift */,
+				F4EA2F1920B8DDE300FDCB1C /* ButtonCell.swift */,
+				F47B5D1C20B8B33900BC1452 /* DetailDataSource.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F4EA2F1420B8C85700FDCB1C /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				F47B5D1E20B8B33900BC1452 /* PlaceCell.swift */,
+				F4EA2F1520B8CC7000FDCB1C /* PlaceCell.xib */,
+				F47B5D2320B8B33900BC1452 /* PlacesDataSource.swift */,
+				F47B5D1D20B8B33900BC1452 /* PlacesGroupHeaderView.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		F4F9394B20B61AC000AE67E4 = {
+			isa = PBXGroup;
+			children = (
+				F4F9395620B61AC000AE67E4 /* TravelGuide */,
+				F4F9395520B61AC000AE67E4 /* Products */,
+				F4F9397A20B61AFD00AE67E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F4F9395520B61AC000AE67E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9395420B61AC000AE67E4 /* TravelGuide.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4F9395620B61AC000AE67E4 /* TravelGuide */ = {
+			isa = PBXGroup;
+			children = (
+				F47B5D2D20B8B4FC00BC1452 /* Resources */,
+				F4EA2F1220B8C7F300FDCB1C /* Header */,
+				F4EA2F1320B8C83700FDCB1C /* Detail */,
+				F4EA2F1420B8C85700FDCB1C /* Places */,
+				F47B5D2220B8B33900BC1452 /* Model.swift */,
+				F4F9395720B61AC000AE67E4 /* AppDelegate.swift */,
+				F4F9395920B61AC000AE67E4 /* ViewController.swift */,
+				F4F9395B20B61AC000AE67E4 /* Main.storyboard */,
+				F4F9395E20B61AC100AE67E4 /* Assets.xcassets */,
+				F4F9396020B61AC100AE67E4 /* LaunchScreen.storyboard */,
+				F4F9396320B61AC100AE67E4 /* Info.plist */,
+			);
+			path = TravelGuide;
+			sourceTree = "<group>";
+		};
+		F4F9397A20B61AFD00AE67E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9397B20B61AFD00AE67E4 /* TableViewDataSource.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4F9395320B61AC000AE67E4 /* TravelGuide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4F9396620B61AC100AE67E4 /* Build configuration list for PBXNativeTarget "TravelGuide" */;
+			buildPhases = (
+				F4F9395020B61AC000AE67E4 /* Sources */,
+				F4F9395120B61AC000AE67E4 /* Frameworks */,
+				F4F9395220B61AC000AE67E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TravelGuide;
+			productName = TravelGuide;
+			productReference = F4F9395420B61AC000AE67E4 /* TravelGuide.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4F9394C20B61AC000AE67E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Dmytro Anokhin";
+				TargetAttributes = {
+					F4F9395320B61AC000AE67E4 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F4F9394F20B61AC000AE67E4 /* Build configuration list for PBXProject "TravelGuide" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4F9394B20B61AC000AE67E4;
+			productRefGroup = F4F9395520B61AC000AE67E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4F9395320B61AC000AE67E4 /* TravelGuide */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4F9395220B61AC000AE67E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47B5D3A20B8B4FC00BC1452 /* Shibuya Crossing.jpg in Resources */,
+				F47B5D3B20B8B4FC00BC1452 /* Tokyo-Header.jpg in Resources */,
+				F4F9396220B61AC100AE67E4 /* LaunchScreen.storyboard in Resources */,
+				F4EA2F1620B8CC7000FDCB1C /* PlaceCell.xib in Resources */,
+				F47B5D3720B8B4FC00BC1452 /* Ginza.jpg in Resources */,
+				F4F9395F20B61AC100AE67E4 /* Assets.xcassets in Resources */,
+				F47B5D3D20B8B4FC00BC1452 /* Senso-ji Temple.jpg in Resources */,
+				F47B5D3620B8B4FC00BC1452 /* Sky Tree.jpg in Resources */,
+				F47B5D3820B8B4FC00BC1452 /* Akihabara.jpg in Resources */,
+				F47B5D3920B8B4FC00BC1452 /* Tokyo.json in Resources */,
+				F4F9395D20B61AC000AE67E4 /* Main.storyboard in Resources */,
+				F47B5D3C20B8B4FC00BC1452 /* Imperial Palace.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4F9395020B61AC000AE67E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EA2F0E20B8B5CA00FDCB1C /* LabelCell.swift in Sources */,
+				F4EA2F1120B8B7E800FDCB1C /* DetailDataSource.swift in Sources */,
+				F4EA2F0A20B8B5C200FDCB1C /* Model.swift in Sources */,
+				F4EA2F1020B8B7E500FDCB1C /* PlacesDataSource.swift in Sources */,
+				F4EA2F0920B8B5BA00FDCB1C /* HeaderCell.swift in Sources */,
+				F4EA2F0C20B8B5CA00FDCB1C /* PlaceCell.swift in Sources */,
+				F4F9395A20B61AC000AE67E4 /* ViewController.swift in Sources */,
+				F4F9395820B61AC000AE67E4 /* AppDelegate.swift in Sources */,
+				F4EA2F1A20B8DDE300FDCB1C /* ButtonCell.swift in Sources */,
+				F4EA2F0820B8B5B700FDCB1C /* HeaderDataSource.swift in Sources */,
+				F4EA2F0D20B8B5CA00FDCB1C /* PlacesGroupHeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4F9395B20B61AC000AE67E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4F9395C20B61AC000AE67E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4F9396020B61AC100AE67E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4F9396120B61AC100AE67E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4F9396420B61AC100AE67E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4F9396520B61AC100AE67E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4F9396720B61AC100AE67E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEQ8YHF529;
+				INFOPLIST_FILE = TravelGuide/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.danokhin.TravelGuide;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4F9396820B61AC100AE67E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UEQ8YHF529;
+				INFOPLIST_FILE = TravelGuide/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.danokhin.TravelGuide;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4F9394F20B61AC000AE67E4 /* Build configuration list for PBXProject "TravelGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4F9396420B61AC100AE67E4 /* Debug */,
+				F4F9396520B61AC100AE67E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4F9396620B61AC100AE67E4 /* Build configuration list for PBXNativeTarget "TravelGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4F9396720B61AC100AE67E4 /* Debug */,
+				F4F9396820B61AC100AE67E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4F9394C20B61AC000AE67E4 /* Project object */;
+}

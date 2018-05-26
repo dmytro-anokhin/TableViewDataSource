@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="TravelGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="44" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WdF-28-UQa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="200" id="OIg-AB-cR0" customClass="HeaderCell" customModule="TravelGuide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OIg-AB-cR0" id="3Z9-By-1V2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tokyo-Header.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JCz-8C-86J">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Grm-sM-wKo">
+                                                    <rect key="frame" x="34.5" y="59.5" width="307" height="81.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tokyo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBq-00-gbE">
+                                                            <rect key="frame" x="91.5" y="0.0" width="124.5" height="58.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="48"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <color key="shadowColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from neon-lit skyscrapers to historic temples" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwh-uS-geG">
+                                                            <rect key="frame" x="0.0" y="62.5" width="307" height="19"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <color key="shadowColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Grm-sM-wKo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Z9-By-1V2" secondAttribute="leadingMargin" id="0eM-4y-9PJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="JCz-8C-86J" secondAttribute="bottom" id="BxC-ZX-tNP"/>
+                                                <constraint firstItem="Grm-sM-wKo" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3Z9-By-1V2" secondAttribute="bottomMargin" id="KA2-Pi-YHf"/>
+                                                <constraint firstItem="JCz-8C-86J" firstAttribute="leading" secondItem="3Z9-By-1V2" secondAttribute="leading" id="L3H-0L-9br"/>
+                                                <constraint firstItem="Grm-sM-wKo" firstAttribute="centerX" secondItem="3Z9-By-1V2" secondAttribute="centerX" id="Q0u-87-jdM"/>
+                                                <constraint firstItem="Grm-sM-wKo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Z9-By-1V2" secondAttribute="topMargin" id="TBc-Pw-ANS"/>
+                                                <constraint firstItem="Grm-sM-wKo" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="3Z9-By-1V2" secondAttribute="trailingMargin" id="ekC-il-BYU"/>
+                                                <constraint firstItem="JCz-8C-86J" firstAttribute="top" secondItem="3Z9-By-1V2" secondAttribute="top" id="ng8-Pq-xWD"/>
+                                                <constraint firstItem="Grm-sM-wKo" firstAttribute="centerY" secondItem="3Z9-By-1V2" secondAttribute="centerY" id="ofd-Ts-H0Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="JCz-8C-86J" secondAttribute="trailing" id="r5y-Zm-141"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerImageView" destination="JCz-8C-86J" id="0Vt-hL-58P"/>
+                                            <outlet property="subtitleLabel" destination="hwh-uS-geG" id="33S-km-mnj"/>
+                                            <outlet property="titleLabel" destination="WBq-00-gbE" id="XBY-eJ-o6Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WelcomeCell" rowHeight="48" id="Xne-hM-8II" customClass="LabelCell" customModule="TravelGuide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="228" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xne-hM-8II" id="vMi-Ws-QUG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Tokyo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kze-Jw-7ZU">
+                                                    <rect key="frame" x="118.5" y="19" width="139" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kze-Jw-7ZU" firstAttribute="top" secondItem="vMi-Ws-QUG" secondAttribute="topMargin" constant="8" id="J6f-4k-jTa"/>
+                                                <constraint firstItem="Kze-Jw-7ZU" firstAttribute="centerX" secondItem="vMi-Ws-QUG" secondAttribute="centerX" id="ehw-PX-wkG"/>
+                                                <constraint firstItem="Kze-Jw-7ZU" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vMi-Ws-QUG" secondAttribute="trailingMargin" id="hwI-el-qXb"/>
+                                                <constraint firstItem="Kze-Jw-7ZU" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="vMi-Ws-QUG" secondAttribute="bottomMargin" id="moN-wd-8hf"/>
+                                                <constraint firstItem="Kze-Jw-7ZU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vMi-Ws-QUG" secondAttribute="leadingMargin" id="w2O-FC-xGN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="Kze-Jw-7ZU" id="QqD-0X-hdc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextCell" rowHeight="78" id="a9p-Lm-2dH" customClass="LabelCell" customModule="TravelGuide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="276" width="375" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a9p-Lm-2dH" id="JGI-Bd-3wF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydA-Yy-qak">
+                                                    <rect key="frame" x="15" y="11" width="345" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ydA-Yy-qak" firstAttribute="leading" secondItem="JGI-Bd-3wF" secondAttribute="leadingMargin" id="InU-D7-uXA"/>
+                                                <constraint firstItem="ydA-Yy-qak" firstAttribute="trailing" secondItem="JGI-Bd-3wF" secondAttribute="trailingMargin" id="exe-Bn-gEr"/>
+                                                <constraint firstItem="ydA-Yy-qak" firstAttribute="top" secondItem="JGI-Bd-3wF" secondAttribute="topMargin" id="txC-Ix-1Pe"/>
+                                                <constraint firstItem="ydA-Yy-qak" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="JGI-Bd-3wF" secondAttribute="bottomMargin" id="x9A-TD-0Tf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="ydA-Yy-qak" id="qFG-Mw-D2e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MoreCell" id="Yi5-CJ-jLO" customClass="ButtonCell" customModule="TravelGuide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="354" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yi5-CJ-jLO" id="PSC-fJ-Ao3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vce-eS-mXc">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <state key="normal" title="Read More..."/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vce-eS-mXc" firstAttribute="leading" secondItem="PSC-fJ-Ao3" secondAttribute="leadingMargin" id="82M-aY-mUT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vce-eS-mXc" secondAttribute="bottom" id="aOs-2c-t0S"/>
+                                                <constraint firstItem="Vce-eS-mXc" firstAttribute="top" secondItem="PSC-fJ-Ao3" secondAttribute="top" id="jH8-25-j13"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Vce-eS-mXc" secondAttribute="trailing" id="mZw-r9-caD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button" destination="Vce-eS-mXc" id="MHx-R3-mob"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WdF-28-UQa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Au-KZ-5JA"/>
+                            <constraint firstItem="WdF-28-UQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f2M-Jc-uNE"/>
+                            <constraint firstItem="WdF-28-UQa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mrl-eI-7Xu"/>
+                            <constraint firstItem="WdF-28-UQa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zyZ-ct-h9E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WdF-28-UQa" id="y2h-ct-Kgu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Tokyo-Header.jpg" width="750" height="422"/>
+    </resources>
+</document>
