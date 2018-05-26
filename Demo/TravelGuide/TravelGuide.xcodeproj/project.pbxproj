@@ -25,13 +25,28 @@
 		F4EA2F1120B8B7E800FDCB1C /* DetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47B5D1C20B8B33900BC1452 /* DetailDataSource.swift */; };
 		F4EA2F1620B8CC7000FDCB1C /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4EA2F1520B8CC7000FDCB1C /* PlaceCell.xib */; };
 		F4EA2F1A20B8DDE300FDCB1C /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EA2F1920B8DDE300FDCB1C /* ButtonCell.swift */; };
+		F4EA2F2320BA0B4400FDCB1C /* TableViewDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F9397B20B61AFD00AE67E4 /* TableViewDataSource.framework */; };
+		F4EA2F2420BA0B4400FDCB1C /* TableViewDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4F9397B20B61AFD00AE67E4 /* TableViewDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4F9395820B61AC000AE67E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9395720B61AC000AE67E4 /* AppDelegate.swift */; };
 		F4F9395A20B61AC000AE67E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9395920B61AC000AE67E4 /* ViewController.swift */; };
 		F4F9395D20B61AC000AE67E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F9395B20B61AC000AE67E4 /* Main.storyboard */; };
 		F4F9395F20B61AC100AE67E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F9395E20B61AC100AE67E4 /* Assets.xcassets */; };
 		F4F9396220B61AC100AE67E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F9396020B61AC100AE67E4 /* LaunchScreen.storyboard */; };
-		F4F9397C20B61AFD00AE67E4 /* TableViewDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F9397B20B61AFD00AE67E4 /* TableViewDataSource.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4EA2F2520BA0B4500FDCB1C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4EA2F2420BA0B4400FDCB1C /* TableViewDataSource.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F47B5D1C20B8B33900BC1452 /* DetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDataSource.swift; sourceTree = "<group>"; };
@@ -67,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4F9397C20B61AFD00AE67E4 /* TableViewDataSource.framework in Frameworks */,
+				F4EA2F2320BA0B4400FDCB1C /* TableViewDataSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +187,7 @@
 				F4F9395020B61AC000AE67E4 /* Sources */,
 				F4F9395120B61AC000AE67E4 /* Frameworks */,
 				F4F9395220B61AC000AE67E4 /* Resources */,
+				F4EA2F2520BA0B4500FDCB1C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
