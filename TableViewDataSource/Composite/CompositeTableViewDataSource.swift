@@ -15,10 +15,11 @@ public class CompositeTableViewDataSource: NSObject, TableViewDataSourceType {
         self.init()
 
         for dataSource in dataSources {
-            add(dataSource)
+            add(dataSource, animation: .none)
         }
     }
 
+    /// Add data source to the composite with animation
     public func add(_ dataSource: TableViewDataSourceType, animation: UITableViewRowAnimation) {
         assert(Thread.isMainThread, "This routine must be executed on the main thread")
 
@@ -38,6 +39,7 @@ public class CompositeTableViewDataSource: NSObject, TableViewDataSourceType {
         tableView?.insertSections(sections, with: animation)
     }
 
+    /// Remove data source from the composite with animation
     public func remove(_ dataSource: TableViewDataSourceType, animation: UITableViewRowAnimation) {
         assert(Thread.isMainThread, "This routine must be executed on the main thread")
 
@@ -54,7 +56,8 @@ public class CompositeTableViewDataSource: NSObject, TableViewDataSourceType {
         tableView?.deleteSections(sections, with: animation)
     }
 
-    var dataSources: [TableViewDataSourceType] {
+    /// List of data sources in the composite
+    public var dataSources: [TableViewDataSourceType] {
         return children as? [TableViewDataSourceType] ?? []
     }
 
