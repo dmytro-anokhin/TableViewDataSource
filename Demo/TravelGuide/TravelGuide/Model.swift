@@ -34,7 +34,7 @@ struct Model: Codable {
 
     let detail: Detail
 
-    let groups: [PlacesGroup]
+    let placeGroups: [PlacesGroup]
 }
 
 

@@ -42,21 +42,26 @@ class DetailDataSource: TableViewDataSource {
             case .welcome:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "WelcomeCell", for: indexPath) as! LabelCell
                 cell.label.text = model.detail.title
+
                 return cell
 
             case .shortText:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! LabelCell
                 cell.label.text = model.detail.shortText
+
                 return cell
 
             case .fullText:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! LabelCell
                 cell.label.text = model.detail.fullText
+
                 return cell
 
             case .more:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MoreCell", for: indexPath) as! ButtonCell
+                cell.button.setTitle(rows.contains(.fullText) ? "Read Less" : "Read More...", for: .normal)
                 cell.button.addTarget(self, action: #selector(moreActionHandler), for: .touchUpInside)
+
                 return cell
         }
     }
@@ -65,20 +70,23 @@ class DetailDataSource: TableViewDataSource {
 
     @objc
     private func moreActionHandler() {
-        if let index = rows.index(of: .fullText) {
-            // Delete
+        guard let moreIndex = rows.index(of: .more) else {
+            return
+        }
+
+        tableView?.beginUpdates()
+        tableView?.reloadRows(at: [ IndexPath(row: moreIndex, section: 0) ], with: .none)
+
+        if let index = rows.index(of: .fullText) { // Delete
             rows.remove(at: index)
             tableView?.deleteRows(at: [ IndexPath(row: index, section: 0) ], with: .fade)
         }
-        else {
-            // Insert
-            guard let index = rows.index(of: .more) else {
-                return
-            }
-
-            rows.insert(.fullText, at: index)
-            tableView?.insertRows(at: [ IndexPath(row: index, section: 0) ], with: .fade)
+        else { // Insert
+            rows.insert(.fullText, at: moreIndex)
+            tableView?.insertRows(at: [ IndexPath(row: moreIndex, section: 0) ], with: .fade)
         }
+
+        tableView?.endUpdates()
     }
 
     private var rows: [Row] = [ .welcome, .shortText, .more ]

@@ -31,6 +31,13 @@
 			remoteGlobalIDString = F4E46C5F20B2C57A00008E98;
 			remoteInfo = TableViewDataSource;
 		};
+		F4EA2F6B20BB5B3A00FDCB1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4EA2F6720BB5B3A00FDCB1C /* AppleHistory.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4EA2F3020BB5ADF00FDCB1C;
+			remoteInfo = AppleHistory;
+		};
 		F4F9397820B61AD500AE67E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4F9396B20B61AD500AE67E4 /* TravelGuide.xcodeproj */;
@@ -58,13 +65,8 @@
 		F4E46C9A20B348BD00008E98 /* ObjCTableViewProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCTableViewProxy.m; sourceTree = "<group>"; };
 		F4E46C9E20B3D17C00008E98 /* CompositeTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		F4EA2F1C20B9FA8000FDCB1C /* TableViewDataSourceCompositeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceCompositeType.swift; sourceTree = "<group>"; };
+		F4EA2F6720BB5B3A00FDCB1C /* AppleHistory.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AppleHistory.xcodeproj; sourceTree = "<group>"; };
 		F4F9396B20B61AD500AE67E4 /* TravelGuide.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TravelGuide.xcodeproj; sourceTree = "<group>"; };
-		F4F9396F20B61AD500AE67E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F4F9397020B61AD500AE67E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F4F9397220B61AD500AE67E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F4F9397420B61AD500AE67E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4F9397520B61AD500AE67E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4F9397620B61AD500AE67E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +168,26 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		F4EA2F5D20BB5B3A00FDCB1C /* AppleHistory */ = {
+			isa = PBXGroup;
+			children = (
+				F4EA2F6720BB5B3A00FDCB1C /* AppleHistory.xcodeproj */,
+			);
+			path = AppleHistory;
+			sourceTree = "<group>";
+		};
+		F4EA2F6820BB5B3A00FDCB1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4EA2F6C20BB5B3A00FDCB1C /* AppleHistory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F4F9396920B61AD500AE67E4 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F4EA2F5D20BB5B3A00FDCB1C /* AppleHistory */,
 				F4F9396A20B61AD500AE67E4 /* TravelGuide */,
 			);
 			path = Demo;
@@ -178,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				F4F9396B20B61AD500AE67E4 /* TravelGuide.xcodeproj */,
-				F4F9396E20B61AD500AE67E4 /* TravelGuide */,
 			);
 			path = TravelGuide;
 			sourceTree = "<group>";
@@ -189,19 +207,6 @@
 				F4F9397920B61AD500AE67E4 /* TravelGuide.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F4F9396E20B61AD500AE67E4 /* TravelGuide */ = {
-			isa = PBXGroup;
-			children = (
-				F4F9396F20B61AD500AE67E4 /* ViewController.swift */,
-				F4F9397020B61AD500AE67E4 /* Assets.xcassets */,
-				F4F9397120B61AD500AE67E4 /* LaunchScreen.storyboard */,
-				F4F9397320B61AD500AE67E4 /* Main.storyboard */,
-				F4F9397520B61AD500AE67E4 /* AppDelegate.swift */,
-				F4F9397620B61AD500AE67E4 /* Info.plist */,
-			);
-			path = TravelGuide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +292,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = F4EA2F6820BB5B3A00FDCB1C /* Products */;
+					ProjectRef = F4EA2F6720BB5B3A00FDCB1C /* AppleHistory.xcodeproj */;
+				},
+				{
 					ProductGroup = F4F9396C20B61AD500AE67E4 /* Products */;
 					ProjectRef = F4F9396B20B61AD500AE67E4 /* TravelGuide.xcodeproj */;
 				},
@@ -300,6 +309,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F4EA2F6C20BB5B3A00FDCB1C /* AppleHistory.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AppleHistory.app;
+			remoteRef = F4EA2F6B20BB5B3A00FDCB1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F4F9397920B61AD500AE67E4 /* TravelGuide.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -361,25 +377,6 @@
 			targetProxy = F4E46C6B20B2C57A00008E98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F4F9397120B61AD500AE67E4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4F9397220B61AD500AE67E4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F4F9397320B61AD500AE67E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4F9397420B61AD500AE67E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F4E46C7220B2C57A00008E98 /* Debug */ = {

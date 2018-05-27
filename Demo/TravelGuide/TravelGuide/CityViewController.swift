@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CityViewController.swift
 //  TravelGuide
 //
 //  Created by Dmytro Anokhin on 23/05/2018.
@@ -10,7 +10,7 @@ import UIKit
 import TableViewDataSource
 
 
-class ViewController: UIViewController {
+class CityViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -24,7 +24,8 @@ class ViewController: UIViewController {
 
             dataSource = CompositeTableViewDataSource([
                 HeaderDataSource(model: model),
-                DetailDataSource(model: model)
+                DetailDataSource(model: model),
+                PlacesDataSource(model: model)
             ])
         }
         catch {
@@ -32,22 +33,5 @@ class ViewController: UIViewController {
         }
 
         dataSource?.configure(with: tableView)
-
-        tableView.dataSource = dataSource
-        tableView.delegate = dataSource
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            do {
-                let model = try loadModel(withName: "Tokyo")
-                self.dataSource?.add(PlacesDataSource(model: model))
-            }
-            catch {
-                print(error)
-            }
-        }
     }
 }

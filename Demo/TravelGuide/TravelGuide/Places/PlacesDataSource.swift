@@ -19,7 +19,7 @@ class PlacesDataSource: TableViewDataSource {
     }
 
     override var numberOfSections: Int {
-        return model.groups.count
+        return model.placeGroups.count
     }
 
     override func registerReusableViews(with tableView: UITableView) {
@@ -28,14 +28,14 @@ class PlacesDataSource: TableViewDataSource {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let group = model.groups[section]
+        let group = model.placeGroups[section]
         return group.places.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as! PlaceCell
 
-        let group = model.groups[indexPath.section]
+        let group = model.placeGroups[indexPath.section]
         let place = group.places[indexPath.row]
 
         cell.nameLabel?.text = place.name
@@ -54,7 +54,7 @@ class PlacesDataSource: TableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PlacesGroupHeaderView") as! PlacesGroupHeaderView
 
-        let group = model.groups[section]
+        let group = model.placeGroups[section]
         view.label.text = group.name
 
         return view
