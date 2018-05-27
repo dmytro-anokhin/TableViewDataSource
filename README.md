@@ -9,10 +9,10 @@ General idea is described in my blog post about object composition in Swift: [Ap
 The **TableViewDataSource** framework is inspired by [Advanced User Interfaces with Collection Views](https://developer.apple.com/videos/play/wwdc2014/232/) WWDC session.
 
 - [Example](#example)
-    + [Basic Approach] (#basic-approach)
-    + [Composition Approach] (#composition-approach)
+    + [Basic Approach](#basic-approach)
+    + [Composition Approach](#composition-approach)
 - [Usage](#usage)
-- [License] (#license)
+- [License](#license)
 
 ## Example
 
