@@ -11,6 +11,7 @@ The **TableViewDataSource** framework is inspired by [Advanced User Interfaces w
 - [Example](#example)
     + [Basic Approach](#basic-approach)
     + [Composition Approach](#composition-approach)
+- [Overview](#overview)
 - [Usage](#usage)
 - [License](#license)
 
@@ -151,6 +152,91 @@ func viewDidLoad() {
 The **TableViewDataSource** framework takes care of composing and mapping. We can focus on implementing parts of our UI and configure final data source the way we want. Reusing parts of the table view on other screens is now as simple, as import a file with a data source.
 
 Full example is in the repository, demonstrating how to use the **TableViewDataSource** framework with storyboards, XIB's, and programmatically build UI.
+
+## Overview
+
+Object structure of the **TableViewDataSource** framework described on the diagram:
+
+
+```
+UITableViewDataSource <--|
+                         |
+  UITableViewDelegate <--|
+                         |
+           Composable <--|--TableViewDataSourceType <--|-- TableViewDataSource (primitive)
+                                                       |
+                                                       |-- CompositeTableViewDataSource (composite)
+                                                            |
+                                           CompositeType <--|
+```
+
+The framework operates with two kinds of data sources: primitive and composite. Primitive data sources implement domain specific functionality: dynamic lists, static content, headers/footers, etc. Composite data source combines multiple data sources in a single object. Composite data source can combine primitive and composite data source, hence complex hierarchies are possible.
+
+Every data source must adopt the `TableViewDataSourceType` protocol, inheriting `UITableViewDataSource` and `UITableViewDelegate` protocols. The `Composable` protocol used for composition mechanism.
+
+```swift
+/// The TableViewDataSourceType is a base type for UITableView data sources
+public protocol TableViewDataSourceType: UITableViewDataSource, UITableViewDelegate, Composable {
+
+    /// Number of sections in the data source
+    var numberOfSections: Int { get }
+
+    /// Performs initial configuration. Call this method after view loaded.
+    func configure(with tableView: UITableView)
+
+    /// Register cell, header, and footer views with a table view
+    func registerReusableViews(with tableView: UITableView)
+
+    /// The table view of a data source.
+    var tableView: UITableView? { get }
+}
+```
+
+To conform to the `TableViewDataSourceType` the class must implement required methods of `UITableViewDataSource`. Number of sections must be accesible with `numberOfSections` property. This is needed for the composition mechanism, when a table view is not yet loaded.
+
+You can subclass the `TableViewDataSource` class to implement required methods of the `UITableViewDataSource` protocol and `numberOfSections` property.
+
+```swift
+open class TableViewDataSource: NSObject, TableViewDataSourceType
+```
+
+The framework introduces `CompositeTableViewDataSource` class to combine `TableViewDataSourceType` objects. This class is not intended to subclassing and must be used as is.
+
+```swift
+public final class CompositeTableViewDataSource : NSObject, TableViewDataSourceType {
+
+    public convenience init(_ dataSources: [TableViewDataSourceType])
+
+    /// Add data source to the composite with animation
+    public func add(_ dataSource: TableViewDataSourceType, animation: UITableViewRowAnimation)
+
+    /// Remove data source from the composite with animation
+    public func remove(_ dataSource: TableViewDataSourceType, animation: UITableViewRowAnimation)
+
+    /// List of data sources in the composite
+    public var dataSources: [TableViewDataSourceType] { get }
+}
+```
+
+The `CompositeTableViewDataSource` combines multiple data sources into one object:
+
+```swift
+// Domain data sources
+let firstDataSource: TableViewDataSourceType = // ..
+let secondDataSource: TableViewDataSourceType = // ..
+
+// Create composite of data sources
+let dataSource = CompositeTableViewDataSource([ firstDataSource, secondDataSource ])
+
+// Configure table view
+dataSource.configure(with: tableView)
+```
+
+The `CompositeTableViewDataSource` appends sections of data sources together. Say, the first data source contains 2 sections and the second - 3. The composite will contain 5 sections, so the table view will. Range for the first data source will be `0...1`, the second - `2...4`.
+
+This does not change the way data sources index sections. In the data source, index of sections always start with 0. The `CompositeTableViewDataSource` takes care of converting *global* sections from a table view to *local* sections for a data source.
+
+This implies some restrictions on table view access. You should always use `tableView` property or `tableView` argument of `UITableViewDataSource`/`UITableViewDelegate` methods. And never capture table view instance or pass reference around.
 
 ## Usage
 
