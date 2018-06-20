@@ -10,20 +10,20 @@ import XCTest
 @testable import TableViewDataSource
 
 
-fileprivate class TestTableViewDataSource: NSObject, TableViewDataSourceType {
+fileprivate class TestTableViewDataSource: TableViewDataSource {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
         cell.textLabel?.text = sections[indexPath.section][indexPath.row]
 
         return cell
     }
 
-    var numberOfSections: Int {
+    override var numberOfSections: Int {
         return sections.count
     }
 

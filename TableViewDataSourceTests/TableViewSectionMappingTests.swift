@@ -12,6 +12,16 @@ import XCTest
 
 fileprivate class TestTableViewDataSource: NSObject, TableViewDataSourceType {
 
+    var parent: CompositeType?
+
+    func configure(with tableView: UITableView) {
+    }
+
+    func registerReusableViews(with tableView: UITableView) {
+    }
+
+    var tableView: UITableView?
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

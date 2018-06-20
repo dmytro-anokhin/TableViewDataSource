@@ -157,6 +157,9 @@ extension CompositeTableViewDataSource: UITableViewDataSource {
         return local.dataSource.tableView(local.proxy, numberOfRowsInSection: local.section)
     }
 
+    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
     final public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let local = composition.local(for: indexPath, in: tableView)
         return local.dataSource.tableView(local.proxy, cellForRowAt: local.indexPath)
@@ -168,7 +171,7 @@ extension CompositeTableViewDataSource: UITableViewDataSource {
         return numberOfSections
     }
 
-    final public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    final public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { // fixed font style. use custom view (UILabel) if you want something different
         let local = composition.local(for: section, in: tableView)
         return local.dataSource.tableView?(local.proxy, titleForHeaderInSection: local.section)
     }
@@ -180,6 +183,7 @@ extension CompositeTableViewDataSource: UITableViewDataSource {
 
     // Editing
 
+    // Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
     final public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         let local = composition.local(for: indexPath, in: tableView)
         return local.dataSource.tableView?(local.proxy, canEditRowAt: local.indexPath) ?? false
@@ -187,6 +191,7 @@ extension CompositeTableViewDataSource: UITableViewDataSource {
 
     // Moving/reordering
 
+    // Allows the reorder accessory view to optionally be shown for a particular row. By default, the reorder control will be shown only if the datasource implements -tableView:moveRowAtIndexPath:toIndexPath:
     final public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         let local = composition.local(for: indexPath, in: tableView)
         return local.dataSource.tableView?(local.proxy, canMoveRowAt: local.indexPath) ?? false
@@ -203,6 +208,8 @@ extension CompositeTableViewDataSource: UITableViewDataSource {
 
     // Data manipulation - insert and delete support
 
+    // After a row has the minus or plus button invoked (based on the UITableViewCellEditingStyle for the cell), the dataSource must commit the change
+    // Not called for edit actions using UITableViewRowAction - the action's handler will be invoked instead
     final public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let local = composition.local(for: indexPath, in: tableView)
         local.dataSource.tableView?(local.proxy, commit: editingStyle, forRowAt: local.indexPath)
@@ -268,6 +275,8 @@ extension CompositeTableViewDataSource: UITableViewDelegate {
         return local.dataSource.tableView?(local.proxy, heightForFooterInSection: local.section) ?? tableView.sectionFooterHeight
     }
 
+    // Use the estimatedHeight methods to quickly calcuate guessed values which will allow for fast load times of the table.
+    // If these methods are implemented, the above -tableView:heightForXXX calls will be deferred until views are ready to be displayed, so more expensive logic can be placed there.
     final public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         let local = composition.local(for: indexPath, in: tableView)
         return local.dataSource.tableView?(local.proxy, estimatedHeightForRowAt: local.indexPath) ?? tableView.estimatedRowHeight
@@ -285,12 +294,12 @@ extension CompositeTableViewDataSource: UITableViewDelegate {
 
     // Section header & footer information. Views are preferred over title should you decide to provide both
 
-    final public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    final public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { // custom view for header. will be adjusted to default or specified header height
         let local = composition.local(for: section, in: tableView)
         return local.dataSource.tableView?(local.proxy, viewForHeaderInSection: local.section)
     }
 
-    final public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    final public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? { // custom view for footer. will be adjusted to default or specified footer height
         let local = composition.local(for: section, in: tableView)
         return local.dataSource.tableView?(local.proxy, viewForFooterInSection: local.section)
     }
@@ -300,36 +309,53 @@ extension CompositeTableViewDataSource: UITableViewDelegate {
         local.dataSource.tableView?(local.proxy, accessoryButtonTappedForRowWith: local.indexPath)
     }
 
-/*
+
     // Selection
 
     // -tableView:shouldHighlightRowAtIndexPath: is called when a touch comes down on a row.
     // Returning NO to that message halts the selection process and does not cause the currently selected row to lose its selected look while the touch is down.
-    @available(iOS 6.0, *)
-    optional public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool
 
-    @available(iOS 6.0, *)
-    optional public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath)
+    final public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        let local = composition.local(for: indexPath, in: tableView)
+        return local.dataSource.tableView?(local.proxy, shouldHighlightRowAt: local.indexPath) ?? false
+    }
 
-    @available(iOS 6.0, *)
-    optional public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath)
+    final public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let local = composition.local(for: indexPath, in: tableView)
+        local.dataSource.tableView?(local.proxy, didHighlightRowAt: local.indexPath)
+    }
+
+    final public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let local = composition.local(for: indexPath, in: tableView)
+        local.dataSource.tableView?(local.proxy, didUnhighlightRowAt: local.indexPath)
+    }
 
 
     // Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.
-    @available(iOS 2.0, *)
-    optional public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?
 
-    @available(iOS 3.0, *)
-    optional public func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath?
+    final public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let local = composition.local(for: indexPath, in: tableView)
+        return local.dataSource.tableView?(local.proxy, willSelectRowAt: local.indexPath)
+    }
+
+    final public func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
+        let local = composition.local(for: indexPath, in: tableView)
+        return local.dataSource.tableView?(local.proxy, willDeselectRowAt: local.indexPath)
+    }
 
     // Called after the user changes the selection.
-    @available(iOS 2.0, *)
-    optional public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 
-    @available(iOS 3.0, *)
-    optional public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
+    final public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let local = composition.local(for: indexPath, in: tableView)
+        local.dataSource.tableView?(local.proxy, didSelectRowAt: local.indexPath)
+    }
 
+    final public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let local = composition.local(for: indexPath, in: tableView)
+        local.dataSource.tableView?(local.proxy, didDeselectRowAt: local.indexPath)
+    }
 
+/*
     // Editing
 
     // Allows customization of the editingStyle for a particular cell located at 'indexPath'. If not implemented, all editable cells will have UITableViewCellEditingStyleDelete set for them when the table has editing property set to YES.
